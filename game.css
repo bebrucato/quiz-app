@@ -1,5 +1,6 @@
 body {
-    color:rgb(114, 154, 206);
+    color:rgb(118, 150, 189);
+    border-radius: 5px;
 }
 
 .choice-container {
@@ -26,6 +27,14 @@ body {
     font-size:150%;
 }
 
+.correct {
+    background: linear-gradient(32deg,rgba(11,223,36) 0%, rgb(41,232,111) 100%) ;
+} 
+
+.incorrect {
+    background: linear-gradient(32deg,rgba(230,29,29,1) 0%, rgb(224,11,11,1) 100%);
+}
+
 #hud {
     display: flex;
     justify-content: space-between;
@@ -43,7 +52,7 @@ body {
 #progressBar {
     width: 500px;
     height: 20px;
-    border: 20px solid greenyellow;
+    border: 20px solid rgb (11,223,36);
     margin-top: 15px;
     border-radius: 50px;
     overflow: hidden;
@@ -51,6 +60,6 @@ body {
 
 #progressBarFull {
     height: 100%;
-    background: greenyellow;
+    background: rgb(11,223,36);
     width: 0%;
 }
