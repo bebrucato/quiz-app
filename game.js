@@ -4,6 +4,7 @@ var choices = Array.from(document.querySelectorAll(".choice-text"));
 var progressText = document.querySelector("#progressText");
 var scoreText = document.querySelector("#score");
 var progressBarFull = document.querySelector("#progressBarFull");
+var count = 100;
 
 //declarations/formulations
 let currentQuestion = {};
@@ -11,6 +12,17 @@ let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+
+var interval = setInterval(function(){
+    document.querySelector('.timer').innerHTML=count;
+    count--;
+    if (count === 0){
+      clearInterval(interval);
+      document.querySelector('.timer').innerHTML='Done';
+      // or...
+      alert("You're out of time!");
+    }
+  }, 1000);
 
 let questions = [
     {
@@ -111,6 +123,9 @@ incrementScore= num => {
     score +=num
     scoreText.innerText = score
 }
+
+
+
 
 startGame ()
 

@@ -44,11 +44,18 @@ body {
     justify-content: space-between;
 }
 
-.hud-prefix {
+.hud-prefix  {
     text-align:center ;
     font-size: 20px;
     color: darkcyan;
     text-shadow: 2px 2px lightblue;
+    margin-top: 5px;
+}
+
+.timer {
+    color: aliceblue;
+    margin-bottom: 10px;
+    text-shadow:2px 2px cadetblue;
 }
 
 .hud-main-text {
