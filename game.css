@@ -13,6 +13,7 @@ body {
 }
 
 .choice-container:hover {
+    cursor: pointer;
     box-shadow: 0 10px 10px 0 purple;
     transition:  scaleY(1.5);
 }
@@ -25,6 +26,7 @@ body {
 .choice-text {
     padding: 20px;
     font-size:150%;
+    width: 100%;
 }
 
 .correct {

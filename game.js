@@ -1,9 +1,9 @@
 //Constants/vars
-const question = document.querySelector('#question');
-const choices = Array.from(document.querySelectorAll('.choice-text'));
-const progressText = document.querySelector('#progressText');
-const scoreText = document.querySelector('#score');
-const progressBarFull = document.querySelector('#progressBarFull');
+var question = document.querySelector("#question");
+var choices = Array.from(document.querySelectorAll(".choice-text"));
+var progressText = document.querySelector("#progressText");
+var scoreText = document.querySelector("#score");
+var progressBarFull = document.querySelector("#progressBarFull");
 
 //declarations/formulations
 let currentQuestion = {};
@@ -47,8 +47,8 @@ let questions = [
     }
 ]
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 4
+var SCORE_POINTS = 100
+var MAX_QUESTIONS = 4
 
 startGame = () => {
     questionCounter= 0
@@ -68,12 +68,12 @@ getNewQuestion = () => {
     progressText.innerText= `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width= `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
-    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+    var questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion= availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
 
     choices.forEach(choice => {
-        const number= choice.dataset['number']
+        var number= choice.dataset['number']
         choice.innerText= currentQuestion['choice' + number]
     })
 
@@ -87,8 +87,8 @@ choices.forEach(choice => {
         if (!acceptingAnswers) return
         
         acceptingAnswers= false
-        const selectedChoice= e.target
-        const selectedAnswer= selectedChoice.dataset['number']
+       var selectedChoice= e.target
+       var selectedAnswer= selectedChoice.dataset['number']
 
         let classToApply= selectedAnswer == currentQuestion.answer ? 'correct' :
         'incorrect'
@@ -101,7 +101,7 @@ choices.forEach(choice => {
 
             setTimeout( () => {
                 selectedChoice.parentElement.classList.remove(classToApply)
-                getNewQuestion ()
+                getNewQuestion()
             }, 1000)
     
     })
