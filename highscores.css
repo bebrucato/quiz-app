@@ -7,7 +7,9 @@ body {
     margin-bottom: 10px;
 }
 
-.high-score {
+li {
     font-size: 25px;
-    margin-bottom: 5px;
+    margin: 10px;
+    border-style: ridge;
+    border-radius: 5px;
 }
