@@ -18,11 +18,18 @@ var interval = setInterval(function(){
     count--;
     if (count === 0){
       clearInterval(interval);
-      document.querySelector('.timer').innerHTML='Done';
-      // or...
+      document.querySelector('.timer').innerHTML='EXPIRED';
       alert("You're out of time!");
     }
   }, 1000);
+    if (acceptingAnswers == !true){
+        clearInterval(interval);
+        document.querySelector(".incorrect").addEventListener("click",function (){
+            sec= -10;
+            document.querySelector(count).innerHTML="100" - sec;
+        })
+    }
+
 
 let questions = [
     {
