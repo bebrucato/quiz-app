@@ -15,10 +15,9 @@ let availableQuestions = [];
 var count = 60;
 
 function redirect() {
-    if (count===0){
-    return window.location.href="end.html"
+ window.location.href="end.html"
 }
- }
+ 
 var interval = setInterval(function(){
     document.querySelector('.timer').innerHTML=count;
     count--;
