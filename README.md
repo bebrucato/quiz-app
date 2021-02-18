@@ -10,3 +10,15 @@ Once the user startes the game, the timer starts running, to which they will be 
 If the user does not complete the quiz within the allotted time, they will recieve an alert stating "You're out of time!". After the user dismisses the alert, they will be automatically redirected to the "end" page. Otherwise, if a user completes the quiz prior to the time running out, they will also be redirected to the "end" page but without the alert.
 
 Once at the "end" page, the user can enter their username into the text box to save their score to the "high score" page. Beneath the "save" button, there will be 2 additional buttons, one to take the player directly back to the game, or one to go home. If the user chooses to go back home, they can click the "high score" button and be directed to the "high score" page where they will be able to view their score. If they want to clear their score from the "high score" page, they can do so by selecting the "clear" button. Then, at last, the user can select the "home" button to go back to the homepage.
+
+### Screenshots
+[Homepage](quizhome.png)
+
+[Game Page](quizgame.png)
+
+[End Page](quizend.png)
+
+[High Scores Page](quizscores.png)
+
+### URL
+[Quiz Url](https://bebrucato.github.io/quiz-app/)
