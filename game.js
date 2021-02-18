@@ -14,7 +14,11 @@ let questionCounter = 0;
 let availableQuestions = [];
 var count = 60;
 
-
+function redirect() {
+    if (count===0){
+    return window.location.href="end.html"
+}
+ }
 var interval = setInterval(function(){
     document.querySelector('.timer').innerHTML=count;
     count--;
@@ -22,6 +26,7 @@ var interval = setInterval(function(){
       clearInterval(interval);
       document.querySelector('.timer').innerHTML='EXPIRED';
       alert("You're out of time!");
+      redirect()
     }
   }, 1000)
    
@@ -73,6 +78,8 @@ startGame = () => {
 }
 
 
+
+
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS ) {
         localStorage.setItem('mostRecentScore', score)
@@ -114,14 +121,14 @@ choices.forEach(choice => {
             count--;
             
             if (count === 0){
-              clearInterval(interval);
-              document.querySelector('.timer').innerHTML='EXPIRED';
-              alert("You're out of time!");
-              gameOver();
-            }
-          }, 1000)
+              document.querySelector('.timer').innerHTML='EXPIRED'
+              alert("You're out of time!")
+            ;}}, 1000)
+
+           
 
         if (classToApply === 'correct') {
+            clearInterval(interval)
            incrementScore(SCORE_POINTS)
             } 
         
@@ -154,4 +161,5 @@ incrementScore= num => {
 
 
 startGame ();
+
 
